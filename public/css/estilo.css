@@ -1,0 +1,142 @@
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+	background-color: #ccc;
+}
+
+header {
+    width: 100%;
+    background-color: #2288dd;
+}
+
+h1 {
+	text-align: center;
+    font-size: 3em;
+    color: white;
+}
+
+.etiqueta {
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+}
+
+#checkMenu {
+    display: none;
+}
+
+header label {
+    display: none;
+    width: 40px;
+    height: 35px;
+    padding: 10px;
+    color: white;
+}
+
+.contenedor--imagen {
+	display: flex;
+
+	justify-content: center;
+}
+
+.content-text > p {
+    font-size: 1.5em;
+    color: white;
+}
+
+.jugadores {
+    
+	margin-top: 15%;
+	display: flex;
+    justify-content: space-between;
+    
+}
+
+.jugadores--seleccionados > a > img {
+    width: 300px;
+    height: 300px;
+    border: 5px solid orange;
+    border-radius: 10px;
+    
+}
+
+.jugadores--seleccionados > a > img:hover{
+    opacity: .7;
+}
+
+.jugador-principal {
+    display: flex;
+    justify-content: center;
+}
+
+.icon-menu {
+    font-size: 30px;
+}
+
+header label:hover {
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.menu li a {
+    display: block;
+    padding: 30px;
+	font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+    border-right: 1px solid white;
+}
+
+.menu li a:hover {
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.3);
+}
+
+main {
+    width: 80%;
+    margin: auto;
+}
+
+@media (max-width:625px) {
+
+    header label{
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        background-color: #2288dd;
+        width: 100%;
+        margin-top: -100%;
+        transition: all 0.5s;
+        z-index: -1;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu li a {
+        border-top: 1px solid white;
+        border-right: none;      
+    }
+
+    #checkMenu:checked ~ .menu {
+        margin: 0;
+       
+    }
+	
+	main {
+		
+		position: absolute;
+		 z-index: -2;
+	}
+}
